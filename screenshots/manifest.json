@@ -1,0 +1,134 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "F1E4C3B8-7F66-4F9E-8E8D-4BB127AEB012.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "landscape-4-yes-chosen_0_E4104ACD-EC9A-482D-8C65-9AB36C866E72.png",
+        "timestamp" : 1795417391.417
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "99BF0850-413F-4B59-89B9-1314AD3A8332.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "landscape-3-yes-no-ready_0_33C3FD00-6B08-4E8F-AF20-3529C507622D.png",
+        "timestamp" : 1795417388.624
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "256DB230-170C-4972-A58E-9848AA22D241.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "landscape-2-yes-no-waiting_0_27DC59EA-C426-4650-8A53-16232301B1C7.png",
+        "timestamp" : 1795417384.157
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "2B86F340-4D38-4FE4-ACC4-63FA617F6FE7.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "landscape-1-talk-screen_0_956BA592-77CA-409A-940B-3E64ECC8D035.png",
+        "timestamp" : 1795417381.654
+      }
+    ],
+    "testIdentifier" : "YesNoUITests/testLandscape()",
+    "testIdentifierURL" : "test://com.apple.xcode/YesNo/YesNoUITests/YesNoUITests/testLandscape"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "EEE97C19-CA69-42CB-8EBB-9A58D2A2DE2B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "portrait-4-yes-chosen_0_F1339356-44A0-4C59-9AAA-4C928A809A33.png",
+        "timestamp" : 1795417419.357
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "42BFEBC8-0BEB-43E6-AB4C-C81BB05DE49B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "portrait-3-yes-no-ready_0_21FFF847-C429-40E1-8607-903C23CF2A56.png",
+        "timestamp" : 1795417417.092
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "0ADA612A-C863-4997-B277-C4359E091AC7.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "portrait-2-yes-no-waiting_0_C0305EB3-AF15-40B9-AA47-F92E1A5A31CF.png",
+        "timestamp" : 1795417412.593
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "9890FB63-5E23-4A6B-8FA4-0AADC261C821.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "portrait-1-talk-screen_0_EA6B1E9F-2A31-4C8B-8F7D-F0652D43B8DC.png",
+        "timestamp" : 1795417410.645
+      }
+    ],
+    "testIdentifier" : "YesNoUITests/testPortrait()",
+    "testIdentifierURL" : "test://com.apple.xcode/YesNo/YesNoUITests/YesNoUITests/testPortrait"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "EC39DB50-D7DA-4CE3-B7A9-169A2CF51D59.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "settings-3-training-on-no-folder_0_8D324177-0FBF-48C7-AB46-C6C1892A79E2.png",
+        "timestamp" : 1795417440.154
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "BC459774-8A52-47A1-85E8-041018B36E23.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "settings-2-screen_0_971FA5E6-C236-4C93-9F12-40869AD636EB.png",
+        "timestamp" : 1795417437.907
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "56EDDA50-4490-404A-BF05-32E2BC65F669.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "settings-1-talk-with-settings_0_24AAC4BA-6321-430D-88CB-19F2807D927C.png",
+        "timestamp" : 1795417432.874
+      }
+    ],
+    "testIdentifier" : "YesNoUITests/testSettingsOpensOnlyWhenHeld()",
+    "testIdentifierURL" : "test://com.apple.xcode/YesNo/YesNoUITests/YesNoUITests/testSettingsOpensOnlyWhenHeld"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "989A0938-E71F-4B4C-9844-E9D69F358824",
+        "deviceName" : "iPad Pro 13-inch (M5)",
+        "exportedFileName" : "F4EBAC32-41FC-467B-9A2D-97389D92F425.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "readme-talk-with-training_0_2EB3ADBD-B78B-422A-88F3-66F9ADBBE95B.png",
+        "timestamp" : 1795417452.802
+      }
+    ],
+    "testIdentifier" : "YesNoUITests/testTrainingButtonShown()",
+    "testIdentifierURL" : "test://com.apple.xcode/YesNo/YesNoUITests/YesNoUITests/testTrainingButtonShown"
+  }
+]
