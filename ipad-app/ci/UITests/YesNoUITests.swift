@@ -58,6 +58,7 @@ final class YesNoUITests: XCTestCase {
         app.launch()
         let settings = app.buttons["Settings"]
         XCTAssertTrue(settings.waitForExistence(timeout: 15), "Settings button on the TALK screen")
+        XCTAssertFalse(app.buttons["Training"].exists, "TRAINING button is hidden until the family switches it on")
         shot("settings-1-talk-with-settings")
 
         settings.tap()

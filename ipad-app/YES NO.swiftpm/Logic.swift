@@ -66,10 +66,18 @@ final class Controller: ObservableObject {
         if Date() < lockUntil { return }
 
         if screen == .home {
-            guard target == "talk" else { return }
+            // He chooses himself: TALK = normal YES/NO (speaks), TRAINING = pictures (silent).
+            switch target {
+            case "talk":
+                training = false
+            case "training":
+                // Only when the family switched it on AND the folder has pictures.
+                guard AppSettings.trainingMode, deck.reload() > 0 else { return }
+                training = true
+            default:
+                return
+            }
             screen = .answer
-            // Training only when it is on AND the folder has pictures; otherwise the normal YES/NO.
-            training = AppSettings.trainingMode && deck.reload() > 0
             trainingTurn = answerChoices[0].id
             lock(for: Timing.entryLock, then: nil)
             if !training { restartIdle() }   // in Training mode it never goes back to TALK by itself

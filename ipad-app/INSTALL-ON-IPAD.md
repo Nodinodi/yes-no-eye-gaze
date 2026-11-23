@@ -47,10 +47,10 @@ The app itself keeps the screen awake and plays sound even in Silent Mode.
 - **EXIT** (bottom): back to TALK, works at any time.
 - No answer for 60 seconds → back to TALK by itself.
 - **Settings** (small grey button, bottom right of TALK): **touch and hold 1 second** to open
-  (a short tap or a Dwell look does nothing). Pause between answers (0–10 s) and Training mode.
-- **Training mode**: practice with pictures. Choose a folder of pictures in Settings. YES and NO
-  take turns: each choice shows a random picture in that button's place for 15 seconds.
-  Silent, always starts with YES, EXIT always works. Details in `SET-UP-IPAD.html`.
+  (a short tap or a Dwell look does nothing). Pause between answers (0–10 s) and the TRAINING button + picture folder.
+- **🖼️ TRAINING** (purple, top right of TALK, when switched on in Settings): he starts practice
+  himself. YES and NO take turns: each choice shows a random picture in that button's place
+  for 15 seconds. Silent, always starts with YES, EXIT always works. Details in `SET-UP-IPAD.html`.
 
 ## If something goes wrong
 

@@ -21,8 +21,8 @@ their family. Shared for free in the hope that it helps other families too.*
 
 This app does **one thing**: YES or NO. Nothing to spell, nothing to type, no menus.
 
-1. **Step 1: learn to choose YES and NO with the eyes.** Training mode helps: every choice
-   shows a picture the person likes, as a reward. It makes practising fun and builds eye control.
+1. **Step 1: learn to choose YES and NO with the eyes.** The **TRAINING** button helps: every
+   choice shows a picture the person likes, as a reward. The person starts it **by themselves**. It makes practising fun and builds eye control.
 2. **Step 2: answer real questions.** A family member asks a yes/no question, and the person
    answers out loud through the iPad.
 3. **Later:** when YES / NO is easy, more boxes can be added (for example 4 answers), or a
@@ -40,15 +40,18 @@ Be patient: it can take days or weeks. Short, happy practice sessions work best.
 
 ## Screens
 
-- **TALK**: a calm, empty screen with one TALK button at the top. Looking around is safe.
+- **TALK**: a calm, empty screen with a TALK button at the top. Looking around is safe.
+  If switched on, a purple **🖼️ TRAINING** button sits top right: the person chooses
+  themselves between talking and practising.
 - **YES / NO**: two big buttons (green YES 😊, red NO ☹️) and an EXIT strip at the bottom.
   The iPad says "Yes" or "No". After an answer it waits a few seconds, so one long look
   cannot answer twice. EXIT always works.
 - **Settings** (small grey button on TALK, **touch and hold 1 second**, so the eyes cannot open it):
   - pause between answers, 0–10 seconds (default 3);
-  - **Training mode**: practice with a reward. Choose a folder of pictures the person likes.
-    YES and NO take turns; each choice shows a random picture in that button's place for
-    15 seconds. Silent, always starts with YES. EXIT always works.
+  - **TRAINING button** on/off, and a folder of pictures the person likes (chosen once).
+- **Training** (from the TRAINING button): practice with a reward. YES and NO take turns; each
+  choice shows a random picture in that button's place for 15 seconds. Silent, always starts
+  with YES. EXIT always works.
 
 The iPad's own **Eye Tracking** and **Dwell Control** do the eye work: looking at a button for
 about 2 seconds "taps" it. The app only gives big, calm buttons.

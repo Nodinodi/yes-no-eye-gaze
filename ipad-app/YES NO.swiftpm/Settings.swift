@@ -21,7 +21,7 @@ enum AppSettings {
         return min(max(value, pauseRange.lowerBound), pauseRange.upperBound)
     }
 
-    /// Training mode switch on the Settings screen.
+    /// TRAINING button switch on the Settings screen.
     static var trainingMode: Bool {
         UserDefaults.standard.bool(forKey: SettingsKey.trainingMode)
     }
@@ -145,15 +145,15 @@ struct SettingsView: View {
         VStack(alignment: .leading, spacing: 2.2 * u) {
             HStack {
                 VStack(alignment: .leading, spacing: 0.6 * u) {
-                    Text("Training mode")
+                    Text("🖼️ TRAINING button")
                         .font(.system(size: 3.8 * u, weight: .bold))
                         .foregroundColor(.white)
-                    Text(trainingMode ? "On: pictures for 15 seconds, no sound" : "Off")
+                    Text(trainingMode ? "On: shown on the TALK screen (pictures for 15 seconds, no sound)" : "Off: hidden")
                         .font(.system(size: 2.6 * u))
                         .foregroundColor(hintGrey)
                 }
                 Spacer()
-                Toggle("Training mode", isOn: $trainingMode)
+                Toggle("Training button", isOn: $trainingMode)
                     .labelsHidden()
                     .tint(yesGreen)
             }
@@ -179,7 +179,7 @@ struct SettingsView: View {
                 }
 
                 if !canLeave {
-                    Text("Choose a folder with pictures, or turn Training mode off.")
+                    Text("Choose a folder with pictures, or turn the TRAINING button off.")
                         .font(.system(size: 2.8 * u, weight: .bold))
                         .foregroundColor(.orange)
                 }
