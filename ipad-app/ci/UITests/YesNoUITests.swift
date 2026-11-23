@@ -80,6 +80,24 @@ final class YesNoUITests: XCTestCase {
         XCTAssertTrue(app.buttons["Talk"].waitForExistence(timeout: 3), "Done goes back to TALK")
     }
 
+    /// Screenshot of the TALK screen with the TRAINING button (for the README).
+    /// "-trainingMode YES" switches the button on for this launch only (no picture folder needed).
+    func testTrainingButtonShown() {
+        XCUIDevice.shared.orientation = .landscapeLeft
+        let app = XCUIApplication()
+        app.launchArguments += ["-trainingMode", "YES"]
+        app.launch()
+        XCTAssertTrue(app.buttons["Talk"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.buttons["Training"].exists, "TRAINING button shown when switched on")
+        shot("readme-talk-with-training")
+
+        // No picture folder in the simulator: TRAINING must do nothing (stay on TALK).
+        app.buttons["Training"].tap()
+        sleep(1)
+        XCTAssertTrue(app.buttons["Talk"].exists, "TRAINING without pictures stays on TALK")
+        app.terminate()
+    }
+
     func testExitWorksDuringTheWait() {
         XCUIDevice.shared.orientation = .landscapeLeft
         let app = XCUIApplication()
