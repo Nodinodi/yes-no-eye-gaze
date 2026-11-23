@@ -1,0 +1,93 @@
+name: iPad simulator check
+
+# Builds the iPad app on a Mac, taps through it on an iPad simulator,
+# and saves screenshots + logs to the "ci-results" branch.
+# Runs when the app changes on main, or by hand (Actions → "iPad simulator check" → Run workflow).
+# It runs ONLY in a PUBLIC repository, where Mac runners are free; in a private copy the job
+# is skipped, so it never uses paid minutes.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "ipad-app/YES NO.swiftpm/**"
+      - "ipad-app/ci/**"
+      - ".github/workflows/ipad-simulator.yml"
+
+permissions:
+  contents: write
+
+# Never two runs at once (saves Mac minutes).
+concurrency:
+  group: ipad-simulator
+  cancel-in-progress: true
+
+jobs:
+  ipad:
+    if: ${{ !github.event.repository.private }}
+    runs-on: macos-15
+    timeout-minutes: 15   # a normal run takes 5-8 min; stop a stuck run early
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Tools
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"          # skip Homebrew's slow self-update
+          HOMEBREW_NO_INSTALL_CLEANUP: "1"
+          HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: "1"
+        run: |
+          xcodebuild -version | tee xcode-version.txt
+          brew install xcodegen
+
+      - name: Pick an iPad simulator
+        run: |
+          ID=$(python3 ipad-app/ci/pick-ipad.py)
+          echo "SIM_ID=$ID" >> "$GITHUB_ENV"
+          xcrun simctl list devices | grep "$ID" | tee simulator.txt
+
+      - name: Build the Swift Playgrounds package as it is
+        id: package
+        continue-on-error: true
+        working-directory: "ipad-app/YES NO.swiftpm"
+        run: |
+          set -o pipefail
+          xcodebuild -list 2>&1 | tee ../../package-list.log
+          xcodebuild -scheme "YES NO" -destination "id=$SIM_ID" build 2>&1 | tee ../../package-build.log | tail -40
+
+      - name: Generate the test project
+        working-directory: ipad-app/ci
+        run: xcodegen generate
+
+      - name: Run on the iPad simulator and tap through
+        id: ui
+        continue-on-error: true
+        working-directory: ipad-app/ci
+        run: |
+          set -o pipefail
+          xcodebuild test -project YesNo.xcodeproj -scheme YesNo \
+            -destination "id=$SIM_ID" -resultBundlePath ../../result.xcresult 2>&1 \
+            | tee ../../ui-test.log | tail -80
+
+      - name: Collect screenshots and logs
+        if: always()
+        run: |
+          mkdir -p ci-results/screenshots
+          xcrun xcresulttool export attachments --path result.xcresult --output-path ci-results/screenshots || true
+          cp xcode-version.txt simulator.txt package-list.log package-build.log ui-test.log ci-results/ 2>/dev/null || true
+          {
+            echo "commit=${GITHUB_SHA}"
+            echo "package_build=${{ steps.package.outcome }}"
+            echo "ui_tests=${{ steps.ui.outcome }}"
+          } > ci-results/summary.txt
+          cat ci-results/summary.txt
+
+      - name: Save results to the ci-results branch
+        if: always()
+        run: |
+          cd ci-results
+          git init -q -b ci-results
+          git config user.name "ipad-ci"
+          git config user.email "ipad-ci@users.noreply.github.com"
+          git add -A
+          git commit -qm "iPad simulator results for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci-results

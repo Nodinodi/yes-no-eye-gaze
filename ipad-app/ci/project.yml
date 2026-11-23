@@ -1,0 +1,55 @@
+# Test-only Xcode project (generated on the Mac test machine with XcodeGen).
+# It builds the same Swift files as "YES NO.swiftpm" plus a UI test that taps the buttons.
+name: YesNo
+options:
+  bundleIdPrefix: com.dino
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  YesNo:
+    type: application
+    platform: iOS
+    sources:
+      # Listed one by one: XcodeGen treats a ".swiftpm" folder as a package, not as source code.
+      - path: "../YES NO.swiftpm/MyApp.swift"
+      - path: "../YES NO.swiftpm/Logic.swift"
+      - path: "../YES NO.swiftpm/ContentView.swift"
+      - path: "../YES NO.swiftpm/Settings.swift"
+      - path: "../YES NO.swiftpm/Training.swift"
+    info:
+      path: Generated/Info.plist
+      properties:
+        CFBundleDisplayName: "YES NO"
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: "5.0"
+  YesNoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - UITests
+    dependencies:
+      - target: YesNo
+    settings:
+      base:
+        SWIFT_VERSION: "5.0"
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  YesNo:
+    build:
+      targets:
+        YesNo: all
+        YesNoUITests: [test]
+    test:
+      targets:
+        - YesNoUITests

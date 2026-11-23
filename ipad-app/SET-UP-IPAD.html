@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YES / NO – iPad set-up</title>
+  <style>
+    body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px; font-size: 21px; line-height: 1.5; color: #1c1f24; }
+    h1 { font-size: 32px; } h2 { font-size: 25px; margin-top: 32px; }
+    li { margin: 8px 0; } b { white-space: nowrap; }
+    .note { background: #eef3fb; border-radius: 12px; padding: 12px 16px; }
+  </style>
+</head>
+<body>
+  <h1>YES / NO app – iPad set-up</h1>
+  <p>Do this once. It takes about 15 minutes.</p>
+
+  <h2>1. Check the iPad</h2>
+  <ul>
+    <li>Settings → General → Software Update: <b>iPadOS 18</b> or newer.</li>
+    <li>Settings → Accessibility: there must be an <b>Eye Tracking</b> item. If it is missing, this iPad cannot do eye tracking.</li>
+  </ul>
+
+  <h2>2. Put the iPad in place</h2>
+  <ul>
+    <li>Fix the iPad firmly (wheelchair or table mount), about <b>45 cm</b> from his face.</li>
+    <li>The front camera should be level with his eyes. Avoid bright light behind him.</li>
+  </ul>
+
+  <h2>3. Turn on Eye Tracking</h2>
+  <ul>
+    <li>Settings → Accessibility → <b>Eye Tracking</b> → on.</li>
+    <li>He follows the dot with his eyes to calibrate. (This repeats every time Eye Tracking is turned on.)</li>
+    <li><b>Smoothing</b>: move a little to the right if the pointer shakes.</li>
+    <li><b>Snap to Item</b>: <b>off</b>. The buttons are big, and snapping could pull his gaze from the empty area onto YES or NO.</li>
+  </ul>
+
+  <h2>4. Dwell Control (look and hold = tap)</h2>
+  <ul>
+    <li>Dwell Control: on. Set the time to about <b>2 seconds</b> (anything from 1.5 to 2.5 seconds is fine). The app is built for this: after each choice it waits longer than one dwell. If he needs a longer time than 2.5 seconds, ask for the app to be adjusted.</li>
+    <li>Leave <b>Fallback Action</b> on <b>Tap</b>.</li>
+    <li><b>Hot Corners</b>: set every corner to <b>None</b>. The big YES/NO buttons reach near the corners.</li>
+  </ul>
+
+  <h2>5. Keep the screen on and the sound up</h2>
+  <ul>
+    <li>Settings → Display &amp; Brightness → <b>Auto-Lock</b> → <b>Never</b>. He cannot wake a dark screen with his eyes.</li>
+    <li>Turn the volume up, and make sure <b>Silent Mode</b> is off (Control Centre), so the spoken answer can be heard.</li>
+  </ul>
+
+  <h2>6. Install the app</h2>
+  <ul>
+    <li>Follow <b>INSTALL-ON-IPAD.md</b> (in the same folder as this guide): install the free <b>Swift Playgrounds</b> app, copy the YES NO app to the iPad, open it and tap <b>Run</b>.</li>
+    <li>Make the app <b>fill the whole screen</b> (hide the code), so his eyes can only reach the app buttons.</li>
+    <li>No internet is needed to use the app.</li>
+  </ul>
+
+  <h2>7. Lock the iPad to the app (Guided Access)</h2>
+  <ul>
+    <li>Settings → Accessibility → <b>Guided Access</b> → on, and set a passcode.</li>
+    <li>In Guided Access settings, set <b>Display Auto-Lock</b> to <b>Never</b>.</li>
+    <li>Open Swift Playgrounds, run the YES NO app full screen, then press the top (or Home) button three times → Start.</li>
+    <li>To leave: press three times again and enter the passcode.</li>
+  </ul>
+
+  <h2>How he uses it</h2>
+  <p class="note">
+    Home screen: looking around is safe. Looking at <b>TALK</b> (top middle) opens YES/NO – he wants to say something.
+    Then <b>ask him a yes/no question straight away</b>: the buttons are dimmed for 3 seconds, and after that
+    wherever his eyes rest can count as an answer. He looks at <b>YES</b> or <b>NO</b>.
+    The iPad says the word and stays on YES/NO, so you can ask the next question (after each answer it waits 3 seconds, or the time set in Settings).
+    <b>EXIT</b> goes back to Home at any time. If he chooses nothing for 60 seconds, it goes back to Home by itself.
+  </p>
+
+  <h2>Settings (for the family)</h2>
+  <p class="note">
+    On the Home screen, <b>touch and hold</b> the small grey <b>⚙️ Settings</b> button (bottom right) for 1 second.
+    A short tap does nothing, so his eyes cannot open it.
+    <b>Pause between answers</b>: how long the app waits after an answer (0 to 10 seconds, normally 3).
+    Under 3 seconds, one long look may give the same answer twice.
+    <b>Training mode</b>: see below. Tap <b>Done</b> to go back.
+  </p>
+
+  <h2>Training mode (practice with pictures)</h2>
+  <p class="note">
+    Put pictures he likes in one folder on the iPad (Files app). In Settings turn <b>Training mode</b> on,
+    tap <b>Choose folder</b> and pick that folder. Done works only when the folder has pictures.
+    Then on the YES/NO screen: he looks at <b>YES</b> → a picture fills the YES place for 15 seconds.
+    Then only <b>NO</b> works → the next picture fills the NO place for 15 seconds. They take turns, always starting with YES.
+    The button that does not work at the moment is dimmed. Pictures come in random order; each is shown once before any repeats.
+    There is no sound in Training mode. <b>EXIT</b> always works. To use normal YES/NO again, turn Training mode off in Settings.
+  </p>
+</body>
+</html>
