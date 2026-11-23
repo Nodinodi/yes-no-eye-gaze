@@ -40,6 +40,12 @@ Be patient: it can take days or weeks. Short, happy practice sessions work best.
 
 ## Screens
 
+Real screenshots from an iPad (simulator), iPad turned sideways:
+
+| Main screen (TALK) | YES / NO | Settings (family) |
+|---|---|---|
+| ![Main screen with the TALK button](screenshots/1-main-screen.png) | ![YES and NO buttons with EXIT](screenshots/2-yes-no.png) | ![Settings screen](screenshots/3-settings.png) |
+
 - **TALK**: a calm, empty screen with a TALK button at the top. Looking around is safe.
   If switched on, a purple **🖼️ TRAINING** button sits top right: the person chooses
   themselves between talking and practising.
